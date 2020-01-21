@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/zizi62/reactDemo.git/static/css/main.3923d170.chunk.css",
+    "main.js": "/zizi62/reactDemo.git/static/js/main.594831e2.chunk.js",
+    "main.js.map": "/zizi62/reactDemo.git/static/js/main.594831e2.chunk.js.map",
+    "runtime-main.js": "/zizi62/reactDemo.git/static/js/runtime-main.0c58bff3.js",
+    "runtime-main.js.map": "/zizi62/reactDemo.git/static/js/runtime-main.0c58bff3.js.map",
+    "static/js/2.73519b12.chunk.js": "/zizi62/reactDemo.git/static/js/2.73519b12.chunk.js",
+    "static/js/2.73519b12.chunk.js.map": "/zizi62/reactDemo.git/static/js/2.73519b12.chunk.js.map",
+    "index.html": "/zizi62/reactDemo.git/index.html",
+    "precache-manifest.23c66ce4dcb3375576c039b95cac3041.js": "/zizi62/reactDemo.git/precache-manifest.23c66ce4dcb3375576c039b95cac3041.js",
+    "service-worker.js": "/zizi62/reactDemo.git/service-worker.js",
+    "static/css/main.3923d170.chunk.css.map": "/zizi62/reactDemo.git/static/css/main.3923d170.chunk.css.map",
+    "static/js/2.73519b12.chunk.js.LICENSE": "/zizi62/reactDemo.git/static/js/2.73519b12.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0c58bff3.js",
+    "static/js/2.73519b12.chunk.js",
+    "static/css/main.3923d170.chunk.css",
+    "static/js/main.594831e2.chunk.js"
+  ]
+}
