@@ -2,7 +2,7 @@
   "name": "my-react-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://zizi62.github.io/reactDemo",
+  "homepage": "http://zizi62.github.io/react-demo-code",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
