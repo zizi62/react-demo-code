@@ -1,0 +1,15 @@
+.inputBox {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+ }
+
+.errorText {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color:red;
+    position: absolute;
+    left: 7px;
+    bottom: -16px;
+}
+

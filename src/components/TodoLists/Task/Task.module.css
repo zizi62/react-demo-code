@@ -1,0 +1,60 @@
+.task {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 3px 8px;
+}
+
+.title {
+    width: 150px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.priority {
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 3px 5px;
+}
+
+.priorityColor{
+    font-size: 14px;
+    font-weight: bold;
+   padding: 4px 14px;
+}
+.low{
+background-color: #99F851;
+}
+
+.medium{
+    background-color:  #FFB853;
+
+}
+
+.high{
+    background-color:  #FF0000;
+}
+
+.completed{
+    padding: 3px 5px;
+}
+
+.del{
+    position: absolute;
+    top:4px;
+    right: -3px;
+    color:#9DCFFB;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.del:hover {
+    color: red;
+}
+
+.completedTask{
+    opacity: 0.4;
+}

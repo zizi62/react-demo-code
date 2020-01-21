@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import { Route } from 'react-router-dom';
+import WeatherContainer from './components/Weather/WeatherContainer';
+import Users from './components/Users/Users';
+import Form from './components/Form/Form';
+import TodoLists from './components/TodoLists/TodoLists';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <div className= 'main'>
+       <Route exact path = '/' component = {Users}/>
+       <Route path = '/form' component = {Form}/>
+       <Route path = '/todos' component = {TodoLists}/>
+       <Route path='/weather' component={WeatherContainer}/>
+      </div>
+    
     </div>
   );
 }

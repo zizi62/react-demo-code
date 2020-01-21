@@ -1,0 +1,38 @@
+.todos {
+    width: 100%;
+    background-color: #9DCFFB;
+    padding: 30px;
+}
+
+
+.todosBox {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btnBox{
+  width: 220px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  
+
+
+}
+
+.btn {
+  cursor: pointer;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background-color: #D0E7FB;
+}
+.btnActive {
+  background-color:#57A5EA;
+  font-weight: bold;
+  color: #ffffff;
+}
+

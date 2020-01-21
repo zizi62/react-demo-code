@@ -1,0 +1,36 @@
+.inputItem {
+    width: 100%;
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: #D0E7FB;
+  
+}
+
+.form{
+    width: 400px;
+    height: 120px;
+    padding: 20px;
+    background-color:#9DCFFB;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+.btn{
+    width: 60px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    background-color: #D0E7FB;
+    margin: 0 auto;
+}
+
+
+

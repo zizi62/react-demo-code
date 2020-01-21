@@ -1,0 +1,47 @@
+.userForm{
+    width: 100%;
+    background-color: #9DCFFB;
+    padding: 15px 30px;
+}
+
+.formItem{
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.inputTitle{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+    font-weight: bold;   
+}
+
+.inputItem{
+    width: 100%;
+    padding: 2px 8px;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+.btnBox {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn{
+    padding: 6px 18px;
+    border:none;
+    border-radius: 8px;
+    background-color: #D0E7FB;
+    outline: none;
+    font-weight: bold;
+    
+}
+
+@media(max-width:992px) {
+    .userForm{ padding: 15px;}
+  }

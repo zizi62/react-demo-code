@@ -1,0 +1,28 @@
+.filter {
+    width: 100%;
+    padding: 8px 16px;
+    background-color:#9DCFFB;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    align-items: center;
+
+}
+
+.input {
+    width: 80%;
+    background-color: transparent;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    background-color: #D0E7FB;
+}

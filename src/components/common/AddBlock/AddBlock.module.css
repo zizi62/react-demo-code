@@ -1,0 +1,37 @@
+
+.inputBox {
+   flex-grow: 1;
+}
+
+.inputItem {
+    width: 90%;
+    padding: 3px 6px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: #D0E7FB;
+    border: 2px solid transparent;
+}
+
+.form{
+    width: 100%;
+    padding: 8px;
+    background-color:#9DCFFB;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 60px;
+    cursor: pointer;
+    padding: 2px 4px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    background-color: #D0E7FB;
+}
+
+.error {
+    border: 2px solid red;
+}

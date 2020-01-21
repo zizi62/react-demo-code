@@ -1,0 +1,41 @@
+.users{
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #D0E7FB;
+    justify-content: space-between;
+    
+}
+
+
+.usersBox{
+  width: 30%;  
+}
+
+.profileBox{
+  position: relative;
+  width: 65%;
+}
+
+.loding {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+
+@media(max-width:1200px) {
+  .usersBox{ width: 100%;  }
+  .profileBox{ width: 100%;  }
+}
+
+@media(max-width:992px) {
+  .users {padding: 20px;}
+  
+}

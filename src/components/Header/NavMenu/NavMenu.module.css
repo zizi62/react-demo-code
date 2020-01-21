@@ -1,0 +1,24 @@
+.navMenu{
+    width: 360px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.link{
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.2;
+    opacity: 1;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #FFD64D;
+}
+
+.activeLink{
+    color: #FFD64D;
+}

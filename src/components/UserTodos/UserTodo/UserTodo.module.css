@@ -1,0 +1,33 @@
+.todoItem{
+    width: 200px;
+    padding: 24px 12px 8px;
+    margin: 8px;
+    background-color:#57A5EA;
+    position: relative;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.title{
+    font-size: 14px; 
+}
+
+.status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75px;
+    padding: 3px 6px;
+    margin: 0;
+    background-color: #99F851;
+    font-size: 12px;
+
+}
+
+.done{
+    background-color: #99F851; 
+}
+
+.inProgress{
+    background-color:#FFB853;
+}
