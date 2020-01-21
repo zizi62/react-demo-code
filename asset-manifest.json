@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/zizi62/reactDemo.git/static/css/main.3923d170.chunk.css",
-    "main.js": "/zizi62/reactDemo.git/static/js/main.594831e2.chunk.js",
-    "main.js.map": "/zizi62/reactDemo.git/static/js/main.594831e2.chunk.js.map",
-    "runtime-main.js": "/zizi62/reactDemo.git/static/js/runtime-main.0c58bff3.js",
-    "runtime-main.js.map": "/zizi62/reactDemo.git/static/js/runtime-main.0c58bff3.js.map",
-    "static/js/2.73519b12.chunk.js": "/zizi62/reactDemo.git/static/js/2.73519b12.chunk.js",
-    "static/js/2.73519b12.chunk.js.map": "/zizi62/reactDemo.git/static/js/2.73519b12.chunk.js.map",
-    "index.html": "/zizi62/reactDemo.git/index.html",
-    "precache-manifest.23c66ce4dcb3375576c039b95cac3041.js": "/zizi62/reactDemo.git/precache-manifest.23c66ce4dcb3375576c039b95cac3041.js",
-    "service-worker.js": "/zizi62/reactDemo.git/service-worker.js",
-    "static/css/main.3923d170.chunk.css.map": "/zizi62/reactDemo.git/static/css/main.3923d170.chunk.css.map",
-    "static/js/2.73519b12.chunk.js.LICENSE": "/zizi62/reactDemo.git/static/js/2.73519b12.chunk.js.LICENSE"
+    "main.css": "/reactDemo/static/css/main.3923d170.chunk.css",
+    "main.js": "/reactDemo/static/js/main.2eb44c16.chunk.js",
+    "main.js.map": "/reactDemo/static/js/main.2eb44c16.chunk.js.map",
+    "runtime-main.js": "/reactDemo/static/js/runtime-main.f4e1fc74.js",
+    "runtime-main.js.map": "/reactDemo/static/js/runtime-main.f4e1fc74.js.map",
+    "static/js/2.73519b12.chunk.js": "/reactDemo/static/js/2.73519b12.chunk.js",
+    "static/js/2.73519b12.chunk.js.map": "/reactDemo/static/js/2.73519b12.chunk.js.map",
+    "index.html": "/reactDemo/index.html",
+    "precache-manifest.905fe8e52ed9dd0b07510a3cbbde0775.js": "/reactDemo/precache-manifest.905fe8e52ed9dd0b07510a3cbbde0775.js",
+    "service-worker.js": "/reactDemo/service-worker.js",
+    "static/css/main.3923d170.chunk.css.map": "/reactDemo/static/css/main.3923d170.chunk.css.map",
+    "static/js/2.73519b12.chunk.js.LICENSE": "/reactDemo/static/js/2.73519b12.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.0c58bff3.js",
+    "static/js/runtime-main.f4e1fc74.js",
     "static/js/2.73519b12.chunk.js",
     "static/css/main.3923d170.chunk.css",
-    "static/js/main.594831e2.chunk.js"
+    "static/js/main.2eb44c16.chunk.js"
   ]
 }
