@@ -1,68 +1,99 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './TodosLists.module.css'
 import Todo from './Todo/Todo';
-import { connect } from 'react-redux';
-import { setTodoLists, setTodo, delTodo } from '../../Redux/reducers/todosReducer';
-import { setTasksList, setTask, delTask, changeCompleted, changePriority } from '../../Redux/reducers/tasksReducer';
 import AddNewBlock from '../common/AddBlock/AddBlock';
-import {getTodos } from '../../Redux/selectors/todoSelectors';
-import { getTasks } from '../../Redux/selectors/tasksSelectors';
+import { localStorageTodoData, localStorageTaskData } from '../../api/localStorageTodosData';
+const uuidv4 = require('uuid/v4')
 
 
-const TodoLists = (props) => {
+const TodoLists = () => {
+    const [todoList, setTodos] = useState([]);
+    const [taskList, setTasks] = useState([]);
+
     useEffect(() => {
-        props.setTasksList()
-        props.setTodoLists()
+        setTodos(localStorageTodoData.getTodos());
+        setTasks(localStorageTaskData.getTasks())
+
     }, [])
 
-    const saveTodo = (value) => props.setTodo(value)
-    const filterId = (arr, itemId) => arr.filter(ar => ar.todoId === itemId)
+    const addNewTodo = (value) => {
+        let newTodo = { id: uuidv4(), title: value }
+        localStorageTodoData.saveTodo([...todoList, newTodo])
+        setTodos(localStorageTodoData.getTodos());
         
+    }
+
+    const delTodo = (todoId) => {
+        localStorageTodoData.saveTodo(todoList.filter(todo => todo.id !== todoId))
+        localStorageTaskData.saveTask(taskList.filter(task => task.todoId !== todoId))
+        setTodos(localStorageTodoData.getTodos())
+        setTasks(localStorageTaskData.getTasks())       
+    }
+
+    const addNewTask = (value, todoId) => {
+        let newTask = {
+            id: uuidv4(),
+            todoId: todoId,
+            title: value,
+            completed: false,
+            priority: "Low"
+        }
+        localStorageTaskData.saveTask([...taskList, newTask])
+        setTasks(localStorageTaskData.getTasks())
+    }
+
+    const delTask = (taskId) => {
+        localStorageTaskData.saveTask(taskList.filter(task => task.id !== taskId))
+        setTasks(localStorageTaskData.getTasks())
+    }
+
+    const changeTask = ( value,taskId, item) =>{
+        return taskList.map(task => {
+            if (task.id === taskId) task[item] = value
+            return task
+        })
+        
+    }
+
+    const changeCompleted = (value,taskId) => {
+        let completed = 'completed'
+        let newTaskList = changeTask(value, taskId, completed)
+        localStorageTaskData.saveTask(newTaskList)
+        setTasks(localStorageTaskData.getTasks())
+}
+
+
+    const changePriority = (value,taskId) => {
+        let priority = 'priority'
+        let newTaskList = changeTask(value, taskId, priority)
+        localStorageTaskData.saveTask(newTaskList)
+        setTasks(localStorageTaskData.getTasks()) 
+    }
+
+    const filterId = (arr, itemId) => arr.filter(ar => ar.todoId === itemId)
+
     return (
         <div className={styles.todoLists}>
-
             <div className={styles.formBox}>
-                <AddNewBlock addBlock={saveTodo} placeholder={'Add todo...'}/>
+                <AddNewBlock addBlock={addNewTodo} placeholder={'Add todo...'} />
             </div>
             <p className={styles.title}>Todos</p>
             <div className={styles.container}>
-            <div className={styles.todoListsBox}>
-                {props.todoLists.map((todo) => <Todo key={todo.id}{...todo}
-                    delTodo={props.delTodo}
-                    addTask={props.addTask}
-                    delTask={props.delTask}
-                    changeCompleted ={props.changeCompleted}
-                    changePriority={props.changePriority}
-                    taskList={filterId(props.tasks, todo.id)}
-                />)}
-            </div>
+                <div className={styles.todoListsBox}>
+                {todoList.length > 0
+                ? todoList.map((todo) => <Todo key={todo.id}{...todo}
+                delTodo={delTodo}
+                addTask={addNewTask}
+                delTask={delTask}
+                changeCompleted={changeCompleted}
+                changePriority={changePriority}
+                taskList={filterId(taskList, todo.id)}/>)
+                : <p>No any todo yet.</p>}
+                </div>
             </div>
         </div>
     )
 }
 
 
-const mapStateToProps = (state) => {
-    return ({
-        todoLists: getTodos(state),
-        tasks: getTasks(state)
-    })
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return (
-        {
-            setTodoLists: () => (dispatch(setTodoLists())),
-            setTodo: (title) => (dispatch(setTodo(title))),
-            delTodo: (todoId) => (dispatch(delTodo(todoId))),
-            setTasksList: () => (dispatch(setTasksList())),
-            addTask: (title, todoId) => (dispatch(setTask(title, todoId))),
-            delTask: (taskId) => (dispatch(delTask(taskId))),
-            changeCompleted:(complited, taskId) => (dispatch(changeCompleted(complited,taskId))),
-            changePriority: (proirity, taskId)=>(dispatch(changePriority(proirity, taskId)))
-        }
-    )
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(TodoLists);
+export default TodoLists;

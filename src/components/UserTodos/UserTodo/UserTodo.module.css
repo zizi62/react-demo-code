@@ -14,7 +14,7 @@
 
 .status {
     position: absolute;
-    top: 0;
+    top: -5px;
     right: 0;
     width: 75px;
     padding: 3px 6px;

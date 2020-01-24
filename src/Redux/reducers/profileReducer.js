@@ -1,16 +1,14 @@
 import { usersAPI } from "../../api/usersApi";
 
-
 const SET_PROFILE = 'profileReduser/SET-PROFILE';
 const CLOSE_PROFILE = 'profileReduser/CLOSE-PROFILE';
-const IS_LODING = 'profileReduser/IS_LODING';
+const IS_LOADING = 'profileReduser/IS_LOADING';
 
 
 const initialState = {
   profile: null,
-  isLoding: false
+  isLoading: false
 }
-
 
 const profileReducer = (state = initialState, action) => {
 
@@ -19,8 +17,8 @@ const profileReducer = (state = initialState, action) => {
       return { ...state, profile: action.profile }
     case CLOSE_PROFILE:
       return { ...state, profile: null }
-      case IS_LODING:
-      return { ...state, isLoding: action.loading }
+    case IS_LOADING:
+      return { ...state, isLoading: action.loading }
 
     default:
       return state;
@@ -30,7 +28,7 @@ const profileReducer = (state = initialState, action) => {
 
 export const getProfileSuccess = (profile) => ({ type: SET_PROFILE, profile })
 const closeUserProfile = () => ({ type: CLOSE_PROFILE })
-const setLoading =(loading)=>({type: IS_LODING, loading})
+const setLoading = (loading) => ({ type: IS_LOADING, loading })
 
 export const setProfile = (id) => async (dispatch) => {
   dispatch(setLoading(false))

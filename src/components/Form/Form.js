@@ -25,12 +25,10 @@ const mapStateToProps = (state) => ({
     user: getUserData(state)
 })
 
-const mapDispatchToProps = (dispatch) => {
-    return ({
-        setNewUser: (value) => dispatch(setNewUser(value)),
-        clearUserData: ()=>dispatch(clearUserData())
-    })
-}
+const mapDispatchToProps = (dispatch) => ({
+    setNewUser: (value) => dispatch(setNewUser(value)),
+    clearUserData: () => dispatch(clearUserData())
+})
 
 
 

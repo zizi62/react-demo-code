@@ -1,6 +1,6 @@
 
 import { weatherApi } from '../../api/weatherApi';
-import { localStorageData } from '../../api/localStorageData';
+import { localStorageWeatherData } from '../../api/localStorageWeatherData';
 
 const SET_WEATHER = 'weatherReducer/SET-WEATHER';
 const SET_CITY = 'weatherReducer/SET-CITY';
@@ -91,7 +91,7 @@ export const getWatherData = (cityName) => async (dispatch, getState) => {
         dispatch(setWeather(data.main.temp, data.wind.speed, data.clouds.all, data.weather[0].description, data.weather[0].icon, cityName))
         let isCity = getState().weatherPage.cityList.some(city => city.toUpperCase() === cityName.toUpperCase())
         !isCity && dispatch(setCityName(cityName))
-        !isCity && localStorageData.saveCity(getState().weatherPage.cityList)
+        !isCity && localStorageWeatherData.saveCity(getState().weatherPage.cityList)
         dispatch(setError(null))
 
     } catch (error) {
@@ -102,7 +102,7 @@ export const getWatherData = (cityName) => async (dispatch, getState) => {
 
 }
 export const getCityListData = () => (dispatch) => {
-    let cities = localStorageData.getCityList();
+    let cities = localStorageWeatherData.getCityList();
     dispatch(setCities(cities))
 }
 

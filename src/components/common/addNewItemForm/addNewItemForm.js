@@ -7,14 +7,13 @@ import { required, maxLength } from '../../../utils/validation/validationForm';
 const maxTextSymbols20 = maxLength(20)
 
 const AddNewItemForm = (props) => {
-    const {submitting } = props;
+    const { submitting } = props;
     return (
         <form className={styles.form} onSubmit={props.handleSubmit}>
-<div className={styles.inputBox}>
-            <Field className={styles.inputItem} name='title' component={Input} type='text' placeholder='' validate={[required, maxTextSymbols20]} />
+            <div className={styles.inputBox}>
+                <Field className={styles.inputItem} name='title' component={Input} type='text' placeholder='' validate={[required, maxTextSymbols20]} />
             </div>
             <button className={styles.btn} disabled={submitting}>Add</button>
-
         </form>
     )
 }

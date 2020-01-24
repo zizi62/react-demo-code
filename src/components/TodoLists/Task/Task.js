@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './Task.module.css';
 import cn from 'classnames';
 
@@ -8,9 +8,6 @@ const Task = (props) => {
     const [isPrioritiEdit, setPriority] = useState(false)
     const [isCompleted, setCompleted] = useState(false)
 
-    // useEffect(() => {
-    
-    // }, [])
 
     const completedChange = (e) => {
         setCompleted(e.currentTarget.checked)

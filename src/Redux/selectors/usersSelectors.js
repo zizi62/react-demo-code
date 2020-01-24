@@ -1,6 +1,8 @@
 export const getUsers = (state)=> state.usersPage.usersList;
 
-export const getLoding = (state)=> state.profilePage.isLoding;
+export const getUsersLoading = (state)=> state.usersPage.isUsersLoading;
+
+export const getLoading = (state)=> state.profilePage.isLoading;
 
 export const getProfile = (state)=> state.profilePage.profile;
 

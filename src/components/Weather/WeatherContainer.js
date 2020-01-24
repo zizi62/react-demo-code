@@ -18,8 +18,7 @@ const WeatherContainear = (props) => {
     )
 }
 
-let mapStateToProps=(state)=>{
-    return {
+let mapStateToProps=(state)=>({
         cityList: getCityList(state),
         temp:getTemp(state),
         wind:getWind(state),
@@ -29,15 +28,12 @@ let mapStateToProps=(state)=>{
         error: getError(state),
         cityName:getCityName(state),
         isLoading: getIsLoading(state)
-    }
-}
+})
 
-let mapDispatchToProps=(dispatch)=>{
-    return {
+let mapDispatchToProps=(dispatch)=>({
         getWatherData: (city)=>{dispatch(getWatherData(city))},
         getCityListData:()=>{dispatch(getCityListData())}  
-    }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(WeatherContainear);
 

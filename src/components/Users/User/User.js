@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './User.module.css';
 import cn from 'classnames';
 
-
-
 export const User = (props) => {
 
-    const viewProfile = (id) => {
-        props.setProfile(id)
-    }
+    const viewProfile = (id) => props.setProfile(id)
 
     return (
         <div className={cn(styles.userBox, { [styles.userActive]: props.selectedId === props.user.id })}>

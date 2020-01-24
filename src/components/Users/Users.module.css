@@ -2,13 +2,13 @@
     width: 100%;
     min-height: 100vh;
     padding: 60px;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     background-color: #D0E7FB;
     justify-content: space-between;
     
 }
-
 
 .usersBox{
   width: 30%;  
@@ -19,7 +19,7 @@
   width: 65%;
 }
 
-.loding {
+.loading {
   position: absolute;
   top:0;
   left: 0;

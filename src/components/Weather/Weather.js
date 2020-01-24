@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import styles from './Weather.module.css'
 import Preloader from '../common/Preloader/Preloader';
 
@@ -27,11 +27,11 @@ const Weather = (props) => {
                     })}
                 </datalist >
             </form>
-            {props.error !== null 
-            ? <div className={styles.error}>
-                <p className={styles.errorText}>{props.error}</p>
-            </div> 
-            :<div className={styles.weaterBox}>
+            {props.error !== null
+                ? <div className={styles.error}>
+                    <p className={styles.errorText}>{props.error}</p>
+                </div>
+                : <div className={styles.weaterBox}>
                     {props.cityName && <>
                         <p className={styles.title}>{props.cityName}</p>
                         <img className={styles.weathetImg} src={`http://openweathermap.org/img/w/${props.icon}.png`} alt='icon' />
@@ -41,21 +41,11 @@ const Weather = (props) => {
                         <p><b>Precipitation:</b> {props.precipitation}.</p>
                     </>
                     }
-
                 </div>}
-
-
         </div>
 
     )
-
-
-
 }
-
-
-
-
 
 export default (Weather);
 
